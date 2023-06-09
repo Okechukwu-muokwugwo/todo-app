@@ -6,7 +6,6 @@ import { addTodo } from '../redux/todoReducer';
 
 const AddTodo = () => {
   const [todo, setTodo] = useState('');
-  console.log(todo);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
