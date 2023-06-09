@@ -31,7 +31,7 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-> `React` > `Webpack` > `Babel`
+> `React` > `Webpack` > `Babel` > `Tailwindcss`
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -73,7 +73,6 @@
 In order to run this project you need:
 
 - A Desktop or Laptop Computer running on with Windows, Mac OS or Linux operating system.
-- Rails installed on the Computer
 
 ### Setup
 
@@ -87,7 +86,7 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-- Run npm install to install all dependencies.
+- Run `npm install` to install all dependencies.
 
 ### Usage
 
@@ -100,7 +99,7 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-- `run jest`
+- `npm test`
 - This will run all tests on your local machine
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -122,9 +121,9 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [] **[Restore Task]**
-- [] **[Archive Task]**
-- [] **[Re-order Tasks]**
+- [ ] **[Restore Task]**
+- [ ] **[Archive Task]**
+- [ ] **[Re-order Tasks]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,11 +148,6 @@ Feel free to check the [issues page](../../issues/).
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments & Attribution <a name="acknowledgements"></a>
-
-- I would like to thank *Gregoire Vella on Behance*
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
