@@ -23,14 +23,15 @@ const AddTodo = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="w-full  max-auto flex flex-nowrap p-5">
       <input
+        className="w-full border outline-none rounded-3xl px-5 py-2"
         type="text"
         placeholder="Add todo..."
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />
-      <button type="submit">
+      <button type="submit" className="-ml-8 pe-5">
         <HiOutlineViewGridAdd />
       </button>
     </form>
