@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { HiOutlineViewGridAdd } from 'react-icons/hi';
 import { v4 as uuidv4 } from 'uuid';
+import { addTodo } from '../redux/todoReducer';
 
 const AddTodo = () => {
   const [todo, setTodo] = useState('');
+  console.log(todo);
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +19,8 @@ const AddTodo = () => {
     if (newTodo.title === '') {
       return;
     }
-    setTodo(newTodo);
+    dispatch(addTodo(newTodo));
+    setTodo('');
   };
 
   return (
