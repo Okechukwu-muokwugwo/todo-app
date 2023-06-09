@@ -20,7 +20,8 @@ const AddTodoItem = () => {
 
   const handleClearCompleted = () => {
     const completedTodos = todosList.filter((todo) => !todo.complete);
-    dispatch(clearCompletedTodo(completedTodos));
+    const completedTodosID = completedTodos.map((todo) => todo.id);
+    dispatch(clearCompletedTodo(completedTodosID));
   };
 
   return (
@@ -38,6 +39,7 @@ const AddTodoItem = () => {
             {todo.title}
           </span>
           <button
+            data-testid="delete-button"
             type="button"
             onClick={() => handleDeleteTodo(todo.id)}
           >
@@ -47,6 +49,7 @@ const AddTodoItem = () => {
       ))}
       {todosList.length !== 0 && (
         <button
+          data-testid="clear-button"
           type="submit"
           className="sm md:w-1/5 mx-auto rounded-2xl bg-indigo-500 hover:bg-red-500 shadow-lg shadow-indigo-500/50 text-white m-3 p-3"
           onClick={handleClearCompleted}
