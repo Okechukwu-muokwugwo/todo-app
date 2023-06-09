@@ -1,25 +1,26 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { AiOutlineDelete } from 'react-icons/ai';
+import { deleteTodo, updateTodo, clearCompletedTodo } from '../redux/todoReducer';
 
 const AddTodoItem = () => {
-  const [todosList, setTodosList] = useState([]);
-  console.log(todosList);
+  const todosList = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
 
   const handleDeleteTodo = (id) => {
-    setTodosList(id);
+    dispatch(deleteTodo(id));
   };
 
   const handleUpdateTodo = (id) => {
-    const todoToUpdate = todosList.find((todo) => todo.id === id);
-    if (todoToUpdate) {
-      const updatedTodo = { ...todoToUpdate, complete: !todoToUpdate.complete };
-      setTodosList(updatedTodo);
+    const todoUpdate = todosList.find((todo) => todo.id === id);
+    if (todoUpdate) {
+      const updatedTodo = { ...todoUpdate, complete: !todoUpdate.complete };
+      dispatch(updateTodo(id, updatedTodo.complete));
     }
   };
 
   const handleClearCompleted = () => {
     const completedTodos = todosList.filter((todo) => !todo.complete);
-    setTodosList(completedTodos);
+    dispatch(clearCompletedTodo(completedTodos));
   };
 
   return (
