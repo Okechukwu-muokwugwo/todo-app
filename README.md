@@ -29,7 +29,7 @@
 
 > Todo app is a simple application that allows users to keep track of their tasks. Users can create new tasks, edit existing tasks, and mark tasks as complete. Todo app is a great way to stay organized and on top of your work.
 
-![screenshot](build/static/media/todo-screenshot.png)
+![Screenshot](src/img/todo-screenshot.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
