@@ -25,16 +25,16 @@ const AddTodoItem = () => {
   };
 
   return (
-    <ul>
+    <ul className="w-full flex flex-col p-2">
       {todosList.map((todo) => (
-        <li key={todo.id}>
+        <li key={todo.id} className="w-2/3 mx-auto flex justify-around py-2 mb-1 border-slate-100 border-b-2">
           <input
             type="checkbox"
             checked={todo.complete}
             onChange={() => handleUpdateTodo(todo.id)}
           />
           <span
-            className={`${todo.completed ? 'line-through' : 'font-sans'}`}
+            className={`${todo.complete ? 'line-through' : 'font-sans'}`}
           >
             {todo.title}
           </span>
