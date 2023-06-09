@@ -3,6 +3,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 
 const AddTodoItem = () => {
   const [todosList, setTodosList] = useState([]);
+  console.log(todosList);
 
   const handleDeleteTodo = (id) => {
     setTodosList(id);

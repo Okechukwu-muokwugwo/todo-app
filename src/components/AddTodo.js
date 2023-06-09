@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiOutlineViewGridAdd } from 'react-icons/hi';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddTodo = () => {
   const [todo, setTodo] = useState('');
@@ -8,24 +8,25 @@ const AddTodo = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTodo = {
-      id: uuid(),
+      id: uuidv4(),
       title: todo,
       complete: false,
     };
     if (newTodo.title === '') {
-      setTodo(newTodo);
+      return;
     }
+    setTodo(newTodo);
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Add todo..."
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />
-      <button type="submit" onSubmit={handleSubmit}>
+      <button type="submit">
         <HiOutlineViewGridAdd />
       </button>
     </form>
